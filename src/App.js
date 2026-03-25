@@ -317,12 +317,69 @@ function App() {
             <a href={MAC_DOWNLOAD_URL} className="btn btn-primary"><AppleIcon />Download for Mac</a>
             <span className="btn btn-secondary btn-disabled"><WindowsIcon />Windows — Coming Soon</span>
           </div>
-          <p className="hero-hint">macOS may block it — run <code>xattr -cr UserEventAgent.app</code> in Terminal, then open.</p>
         </div>
         <Reveal className="hero-mockup-wrap">
           <HeroMockup />
         </Reveal>
       </section>
+
+      {/* ── SETUP GUIDE ── */}
+      <section className="setup-section" id="setup">
+        <Reveal>
+          <div className="section-label"><span className="label-bar" />Installation</div>
+          <h2 className="feat-title">Up and running in 60 seconds</h2>
+        </Reveal>
+        <div className="setup-steps">
+          <Reveal className="setup-step">
+            <div className="setup-step-num">1</div>
+            <div className="setup-step-content">
+              <h3>Download & unzip</h3>
+              <p>Click "Download for Mac" above. Unzip the file.</p>
+            </div>
+          </Reveal>
+          <Reveal delay={100} className="setup-step">
+            <div className="setup-step-num">2</div>
+            <div className="setup-step-content">
+              <h3>Allow it to open</h3>
+              <p>macOS will block it the first time. Go to <strong>System Settings → Privacy & Security</strong>, scroll down and click <strong>"Open Anyway"</strong>.</p>
+              <div className="macos-settings-mock">
+                <div className="settings-sidebar">
+                  <div className="settings-sidebar-item">Network</div>
+                  <div className="settings-sidebar-item settings-sidebar-item--active">Privacy & Security</div>
+                  <div className="settings-sidebar-item">General</div>
+                </div>
+                <div className="settings-main">
+                  <div className="settings-heading">Security</div>
+                  <div className="settings-row">
+                    <span>Allow applications from</span>
+                    <span className="settings-badge">App Store & Known Developers</span>
+                  </div>
+                  <div className="settings-blocked">
+                    <span>"UserEventAgent" was blocked to protect your Mac.</span>
+                    <button className="settings-open-btn">Open Anyway</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={200} className="setup-step">
+            <div className="setup-step-num">3</div>
+            <div className="setup-step-content">
+              <h3>Enter your API key</h3>
+              <p>On first launch, pick your provider — <strong>OpenAI</strong> or <strong>Groq (free)</strong> — paste your API key, and hit Start. Wispi validates the key and disappears into stealth mode.</p>
+            </div>
+          </Reveal>
+          <Reveal delay={300} className="setup-step">
+            <div className="setup-step-num">4</div>
+            <div className="setup-step-content">
+              <h3>Use it</h3>
+              <p>Press <kbd>opt</kbd> + <kbd>Space</kbd> to toggle Wispi. It's invisible to screen capture, floating above everything. That's it.</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <div className="laser-line" />
 
       {/* ── FEATURE 1: STEALTH ── */}
       <section className="feat-section" id="features">
