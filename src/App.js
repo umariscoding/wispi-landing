@@ -290,7 +290,7 @@ function App() {
       {/* NAV */}
       <nav className="nav">
         <div className="nav-logo">
-          <div className="nav-logo-icon" />
+          <img src="/logo.png" alt="Wispi" className="nav-logo-icon" />
           <span className="nav-wordmark">Wispi</span>
         </div>
         <div className="nav-links">
