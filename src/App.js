@@ -280,7 +280,7 @@ function FaqItem({ q, a }) {
   );
 }
 
-const MAC_DOWNLOAD_URL = 'https://github.com/umariscoding/wispi-ai/releases/latest/download/Wispi-Mac.zip';
+const MAC_DOWNLOAD_URL = 'https://github.com/umariscoding/wispi-landing/releases/download/v1.0.1/Wispi-Mac.zip';
 // const WIN_DOWNLOAD_URL = null; // TODO: add when Windows build is ready
 
 /* ── APP ── */
